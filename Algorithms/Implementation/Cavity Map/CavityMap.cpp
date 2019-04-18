@@ -6,7 +6,8 @@ int main()
   cin>>n;
   char mat[n][n];
   for(int i=0;i<n;i++)
-        cin>>mat[i];
+    for(int j=0;j<n;j++)
+        cin>>mat[i][j];
 
   for(int i=0;i<n;i++)
     {
@@ -14,7 +15,7 @@ int main()
       {
         char k=mat[i][j];
         if(i!=0&&i!=n-1&&j!=0&&j!=n-1&&k>mat[i-1][j]&&k>mat[i][j-1]&&k>mat[i][j+1]&&k>mat[i+1][j])
-          cout<<'x';
+          cout<<'X';
         else
           cout<<k;
       }
